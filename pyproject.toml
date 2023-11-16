@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "osu-dreamer-gui"
+version = "0.1.0"
+description = ""
+authors = ["BarsTiger <zxcbarstiger@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.8"
+osu-dreamer = { git = "https://github.com/jaswon/osu-dreamer", tag = "v4.0" }
+torch = [
+    { url = "https://download.pytorch.org/whl/cu118/torch-2.1.1%2Bcu118-cp38-cp38-win_amd64.whl", platform = "win32" },
+    { url = "https://download.pytorch.org/whl/cu118/torch-2.1.1%2Bcu118-cp38-cp38-linux_x86_64.whl", platform = "linux" }
+]
+torchaudio = { version = "^2.1.1+cu118", source = "torchcuda" }
+nicegui = "^1.4.2"
+pywebview = "^4.4.1"
+pyinstaller = "^6.2.0"
+rich = "^13.7.0"
+
+
+[[tool.poetry.source]]
+name = "torchcuda"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
