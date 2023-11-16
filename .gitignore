@@ -1,6 +1,8 @@
 /build
 /dist
-/models/*
+/models/*.ckpt
+/.idea
+/tests
 
 *.osz
 poetry.lock
