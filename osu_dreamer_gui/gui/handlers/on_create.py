@@ -41,9 +41,9 @@ async def on_create():
         mapset_path = await run.cpu_bound(creator, dict(
             model_name=storage['model_name'],
             audio_content=storage['audio_content'],
-            bpm=storage['bpm'],
-            num_samples=storage['num_samples'],
-            sample_steps=storage['sample_steps'],
+            bpm=int(storage['bpm']),
+            num_samples=int(storage['num_samples']),
+            sample_steps=int(storage['sample_steps']),
             detected_title=storage['detected_title'],
             detected_artist=storage['detected_artist'],
             filename=storage['filename'],
