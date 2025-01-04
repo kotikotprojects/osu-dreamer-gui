@@ -6,3 +6,4 @@
 
 *.osz
 poetry.lock
+**/__pycache__/
